@@ -1,0 +1,36 @@
+/* style.css */
+
+/* 1) Tailwind core */
+@import "tailwindcss";
+
+/* 2) Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap");
+
+/* 3) Cài font mặc định */
+@layer base {
+  html { font-family: "Be Vietnam Pro", sans-serif; }
+}
+
+/* 4) Tạo lớp tiện ích cho cỡ chữ */
+@layer utilities {
+  .text-large { @apply text-[2rem];   } /* 32 px */
+  .text-title { @apply text-[1.25rem];} /* 20 px */
+  .text-body  { @apply text-[1rem];   } /* 16 px */
+  .text-small { @apply text-[0.75rem];} /* 12 px */
+}
+
+/* 5) Palette màu tùy chỉnh – @layer utilities */
+@layer utilities {
+  /* ─── Text color ─── */
+  .text-slate-light  { color: #97A3B6; }
+  .text-slate        { color: #CDD5E0; }
+  .text-muted        { color: #364153; }
+
+  /* ─── Background color ─── */
+  .bg-card-dark      { background-color: #111729; }
+  .bg-app            { background-color: #20293A;}
+  .bg-card-gradient  { background-image: linear-gradient(to right, #111729, #1D1B48); }
+
+  /* ─── Border color ─── */
+  .border-indigo-dark { border-color: #1D1B48; }
+}
